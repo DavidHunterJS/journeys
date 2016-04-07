@@ -1,0 +1,340 @@
+@font-face {
+    font-family: tangerine;
+    src: url(../fonts/Tangerine_Regular.ttf);
+}
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+  -webkit-font-smoothing: antialiased;
+  font: normal 14px arial,sans-serif;
+}
+h1,h2,h3,h4 {
+  font-family: 'Kreon', serif;
+  vertical-align:middle;
+}
+h1 {
+  font-size:50px;
+  font-weight: 400;
+}
+h2, h3 {
+  font-family: 'Kreon', serif;
+  font-size: 27px;
+}
+@media (max-width: 375px) {
+  .h1, h1 {
+    font-size: 25px;
+  }
+  .h2, h2, h3 {
+    font-size: 22px;
+  }
+  .h4, h4 {
+    font-size: 20px;
+  }
+}
+/* fix for too large of container margins on larger screens */
+@media (min-width: 1200px){
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+section {
+  color: #ffffff;
+  min-height: 400px;
+  height: auto !important;
+  height: 100%;
+  padding-top:100px;
+}
+.row {
+  margin-left:0px;
+  margin-right:0px;
+}
+/* first divider under the nav menu */
+ .divider1 {
+  height: 65px;
+}
+.divider {
+  height:100px;
+}
+.panel {
+  border-width:0;
+}
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+/*
+  SMALL ICONS/IMGS UNDER PROFILE IMAGES
+*/
+.niners {
+  width: 36px;
+  height: 28px;
+}
+.xbox {
+  width: 28px;
+  height: 28px;
+}
+.crown {
+  width: 55px;
+  height: 28px;
+}
+.warriors {
+  width: 30px;
+  height: 30px;
+}
+.diva {
+  width: 50px;
+  height: 28px;
+}
+
+/*
+  ======
+  HEADER
+  ======
+*/
+header {
+  height:550px;
+  color:#000000;
+}
+header h1,header h2,header h3 a,header a,header a:hover {
+  color:#101010;
+  font-weight:800;
+  text-decoration:none;
+}
+
+
+/*
+  ======
+  FOOTER
+  ======
+*/
+/* Set the fixed height of the footer here */
+footer {
+  height: 60px;
+  margin-top:50px;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+footer {
+  background-color:#414141;
+}
+footer a {
+  color:#efefef;
+}
+
+
+
+
+
+/*
+  =============
+  Journeys LOGO
+  =============
+*/
+/*
+  cursive J and 'ourneys'
+*/
+.header-text {font-size: 15vmax;}
+.cap-j {font-family: 'tangerine';color: #fff;}
+.sub-j {font-family: 'Kreon', serif;font-size: 8vmax;color: #fff;}
+/*
+  'supported living' text 
+*/
+.sub-header-text {
+  font-family: 'Kreon', serif;
+  font-size: 3vmax;
+  margin: -7% 0 0 26%;
+  color: #fff;
+}
+/*
+  iphone 5, sg4
+*/
+@media (max-width: 360px) {
+  .sub-header-text {
+      margin: -22% 80% 10px;
+  }
+}
+/*
+  iphone 6
+*/
+@media  (min-width: 375px) and (max-width: 600px){
+  .sub-header-text {
+      margin: -22% 66% 10px;
+  }
+}
+
+/* LOGO PLACMENT on ipad in portrait */
+@media (max-width: 769px) and (min-width: 450px){
+  header {
+    height: 377px;
+    padding-top: 145px;
+  }
+}
+/* LOGO PLACMENT on most mobile phones in portrait */
+@media (max-width: 450px) {
+  header {
+    height: 212px;
+    padding-top: 54px;
+  }
+}
+
+/* pushes Journeys logo down on large screens ... */
+@media (min-width: 800px) and (max-width: 1600px){
+  #section0 > div.container > div {
+    padding-top: 220px;
+  }
+}
+/* ALSO pushes Journeys logo down on large screens */
+@media (min-width: 1601px) and (max-width: 1920px){
+  #section0 > div.container > div {
+    padding-top: 145px;
+  }
+}
+
+
+  /*
+  ======
+  NAVBAR
+  ======
+  */
+#nav {
+  width: 100%;
+  position:static;
+  top:-32px;
+}
+
+#nav.affix {
+   position: fixed;
+   top: 0;
+   z-index:10;
+   -webkit-transition: all .6s ease-in-out;
+}
+@media (min-width: 767px) {
+  .navbar-nav.nav-justified > li{
+    float:none;
+  }
+}
+.navbar-nav {
+  margin: 1px 1px;
+}  
+/* NAV MAIN */
+.navbar-custom {
+  background-color: #fff;
+  font-size: 1.1em;
+  font-weight:700;
+  font-family: "Lato", "sans serif";
+  text-transform:uppercase;
+  letter-spacing: 3px;
+  border-width:0;
+  transition: background-color .75s ease
+}
+/* NAV ANCHORS */
+.navbar-custom  .navbar-nav>li>a {
+  color: #333;
+  border: 2px solid transparent;
+  transition: color 0.75s ease, border 0.75s ease;
+}
+/* NAV HOVER */
+.navbar-custom  .navbar-nav li>a:hover {
+  color: #fff;
+  background-color: #c1c1bf;
+  transition: color 1.5s ease, border 1.5s ease, background-color 1.5s ease;
+}
+/* NAV SELECTED */
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+  color: #fff;
+  background-color: #c1c1bf;
+}
+/* THIS LOOKS DEAD - VERIFY AND DEL */
+.navbar-custom .navbar-nav>.dropdown>a .caret {
+  border-top-color: #999;
+  border-bottom-color: #999;
+}
+.navbar-custom .dropdown-menu{
+	right:0;
+}
+.navbar-collapse.in { /*3.0.2 bug workaround*/
+    overflow-y: visible;
+}
+.navbar-toggle {
+	outline:0;
+}
+/* mobile nav button */
+#navButton {
+  border-color:transparent;
+  font-size: xx-large;
+  padding:0 0 10px 42px;
+  margin-bottom: 1px;
+}
+#navButton:hover{
+  background-color: #fff;
+}
+/* /END NAV BAR */
+
+/* google maps area */
+#map-canvas {
+  width: 100%; 
+  height: 200px;
+	margin: 0;
+	padding: 15px;
+}
+
+/* scroll to top arrow at the bottom of the page */
+.scroll-top {
+   position:fixed;
+   bottom:0;
+   right:6%;
+   z-index:100;
+   background: #eee;
+   font-size:24px;
+   border-top-left-radius:3px;
+   border-top-right-radius:3px;
+}
+.scroll-top a:link,.scroll-top a:visited {
+  color:#222;
+} 
+/* 
+=================
+BACKGROUND IMAGES
+=================
+*/
+
+.bg-0 {
+  background: url('../img/bg-0.png') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.bg-1 {
+	background: url('../img/008.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.bg-2 {
+	background: url('../img/013.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.bg-3 {
+	background: url('../img/013.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+.bg-4 {
+	padding-top:30px;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20,20,20,0.2)),to(rgba(255,255,255,0)), color-stop(1,#000));
+}
