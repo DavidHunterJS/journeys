@@ -218,7 +218,7 @@ footer a {
    position: fixed;
    top: 0;
    z-index:10;
-   -webkit-transition: all .6s ease-in-out;
+   transition: all .6s ease-in-out;
 }
 @media (min-width: 767px) {
   .navbar-nav.nav-justified > li{
@@ -311,28 +311,28 @@ BACKGROUND IMAGES
 */
 
 .bg-0 {
-  background: url('../img/bg-0.png') no-repeat center center fixed; 
+  background: url('../img/bg-0.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .bg-1 {
-	background: url('../img/008.jpg') no-repeat center center fixed; 
+	background: url('../img/008.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 .bg-2 {
-	background: url('../img/013.jpg') no-repeat center center fixed; 
+	background: url('../img/013.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 .bg-3 {
-	background: url('../img/013.jpg') no-repeat center center fixed; 
+	background: url('../img/013.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
