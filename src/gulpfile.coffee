@@ -35,6 +35,7 @@ do ->
       .pipe(gulp.dest('../dist/css'))
       .pipe connect.reload()
 
+  # CSS-TO-SASS
   ###gulp.task 'sass', ->
   gulp.src('*.sass')
     .pipe(sass(
