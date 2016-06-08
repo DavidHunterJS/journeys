@@ -1,12 +1,13 @@
 do ->
   'use strict'
   
-  gulp         = require 'gulp'
-  gutil        = require 'gulp-util'
-  plumber      = require 'gulp-plumber'
-  connect      = require 'gulp-connect'
-  coffee       = require 'gulp-coffee'
-  uglify       = require 'gulp-uglify'
+  gulp    = require 'gulp'
+  sass    = require 'gulp-sass'
+  gutil   = require 'gulp-util'
+  coffee  = require 'gulp-coffee'
+  uglify  = require 'gulp-uglify'
+  connect = require 'gulp-connect'
+  plumber = require 'gulp-plumber'
 
 
   gulp.task 'connect', ->
@@ -16,11 +17,17 @@ do ->
       livereload: true
     return
   
+  
+  gulp.task 'sas', ->
+    gulp.src('styles/*.sass')
+      .pipe(sass.sync()).on('error', sass.logError)
+      .pipe(gulp.dest('../dist/css'))
+      .pipe connect.reload()
+  
   gulp.task 'html', ->
     gulp.src('*.html')
       .pipe(gulp.dest('../dist'))
       .pipe connect.reload()
-  
   
   gulp.task 'js', ->
     gulp.src('js/*.js')
@@ -28,33 +35,11 @@ do ->
       .pipe(uglify())
       .pipe(gulp.dest('../dist/js'))
       .pipe connect.reload()
-  
-  gulp.task 'css', ->
-    gulp.src('css/*.css')
-      .pipe(plumber())
-      .pipe(gulp.dest('../dist/css'))
-      .pipe connect.reload()
 
-  # CSS-TO-SASS
-  ###gulp.task 'sass', ->
-  gulp.src('*.sass')
-    .pipe(sass(
-      indentedSyntax: true
-      errLogToConsole: true
-    )).on('error', gutil.log)
-    .pipe(gulp.dest('../dist/css/'))
-    .pipe connect.reload()###
 
-  ###gulp.task 'coffeeTask', ->
-    gulp.src('./coffee/*.coffee')
-      .pipe(plumber())
-      .pipe(coffee({bare: true}).on('error', gutil.log))
-      .pipe(gulp.dest('../dist/js/'))
-      .pipe connect.reload()###
-  
   gulp.task 'watch', ->
     gulp.watch [ '*.html' ], [ 'html' ]
-    gulp.watch [ './css/*.css' ], [ 'css' ]
+    gulp.watch [ './styles/*' ], [ 'sas' ]
     gulp.watch [ 'js/*.js' ], [ 'js' ]
     # gulp.watch [ './coffee/*.coffee' ], [ 'coffeeTask' ]
     return
