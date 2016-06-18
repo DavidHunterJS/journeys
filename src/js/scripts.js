@@ -17,7 +17,8 @@ $(document).ready(function() {
     });
 
 
-    // Masonry plugin fixes vertical space issue with client tiles
+    // Masonry plugin 
+    // on window load fixes issue with overlapping masonry items
     $(window).load(function(){
         $('.grid').masonry({
             itemSelector: '.grid-item'
