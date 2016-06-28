@@ -8,7 +8,7 @@ do ->
   uglify       = require 'gulp-uglify'
   connect      = require 'gulp-connect'
   plumber      = require 'gulp-plumber'
-  minifyCSS    = require 'gulp-minify-css'
+  cleanCSS     = require 'gulp-clean-css'
   sourcemaps   = require 'gulp-sourcemaps'
   autoprefixer = require 'gulp-autoprefixer'
 
@@ -31,8 +31,8 @@ do ->
       .pipe(autoprefixer({
         browsers: ['last 2 versions']
       }))
+      .pipe(cleanCSS())
       .pipe(sourcemaps.write('.'))
-      .pipe(minifyCSS())
       .pipe(gulp.dest('../dist/css'))
       .pipe connect.reload()
   
