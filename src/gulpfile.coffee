@@ -32,6 +32,7 @@ do ->
         browsers: ['last 2 versions']
       }))
       .pipe(sourcemaps.write('.'))
+      .pipe(minifyCSS())
       .pipe(gulp.dest('../dist/css'))
       .pipe connect.reload()
   
