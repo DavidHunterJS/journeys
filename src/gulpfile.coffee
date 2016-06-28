@@ -41,19 +41,19 @@ do ->
       .pipe(gulp.dest('../dist'))
       .pipe connect.reload()
   
-  gulp.task 'js', ->
-    gulp.src('js/*.js')
+  gulp.task 'coffee', ->
+    gulp.src('./scripts/*.coffee')
       .pipe(plumber())
+      .pipe(coffee({bare: true}).on('error', gutil.log))
+      .pipe(gulp.dest('./dev-js'))
       .pipe(uglify())
-      .pipe(gulp.dest('../dist/js'))
+      .pipe(gulp.dest('../dist/scripts'))
       .pipe connect.reload()
-
 
   gulp.task 'watch', ->
     gulp.watch [ '*.html' ], [ 'html' ]
     gulp.watch [ './styles/*', './styles/*/*.sass' ], [ 'sas' ]
-    gulp.watch [ 'js/*.js' ], [ 'js' ]
-    # gulp.watch [ './coffee/*.coffee' ], [ 'coffeeTask' ]
+    gulp.watch [ './scripts/*.coffee' ], [ 'coffee' ]
     return
   
   gulp.task 'default', [
