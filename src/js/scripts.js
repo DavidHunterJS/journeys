@@ -6,7 +6,7 @@ $(document).ready(function() {
         }
     });
     
-    // BACKGROUND SLIDESHOW ON MASTHEAD using Backstretch
+    // BACKGROUND SLIDESHOW using Backstretch
     $("#section0").backstretch([
         "./img/012.jpg",
         "./img/005.jpg",
