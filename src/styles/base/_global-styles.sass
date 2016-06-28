@@ -1,0 +1,76 @@
+// REMOVE DUPLICATE AND UNUSED RULES
+html,
+body
+  -webkit-font-smoothing: antialiased
+  // The html and body elements cannot have any padding or margin.
+  font: normal 14px arial, sans-serif
+  height: 100%
+
+h1,
+h2,
+h3,
+h4
+  font-family: 'Kreon', serif
+  vertical-align: middle
+
+h1
+  font-size: 50px
+  font-weight: 400
+
+h2,
+h3
+  font-family: 'Kreon', serif
+  font-size: 27px
+
+@media (max-width: 375px)
+  .h1,
+  h1
+    font-size: 25px
+
+  .h2,
+  h2,
+  h3
+    font-size: 22px
+
+  .h4,
+  h4
+    font-size: 20px
+
+@media (min-width: 1200px)
+  .container
+    margin: 0 auto
+    width: 90%
+
+// LEGACY CODE BLOCK
+// there is no need for two height properties, is there?
+// remove one and qa to assure it matches look and behaviour 
+section
+  color: $color-white
+  height: auto !important
+  min-height: 400px
+  height: 100%
+  padding-top: 100px
+
+.row
+  margin-left: 0px
+  margin-right: 0px
+
+// first divider under the nav menu
+.divider1
+  height: 65px
+
+.divider
+  height: 100px
+
+.panel
+  border-width: 0
+
+// Wrapper for page content to push down footer
+#wrap
+  height: auto !important
+  // Negative indent footer by its height
+  margin: 0 auto -60px
+  min-height: 100%
+  height: 100%
+  // Pad bottom by footer height
+  padding: 0 0 60px

@@ -1,0 +1,57 @@
+//  =============
+//  Journeys LOGO
+//  =============
+
+// cursive J and 'ourneys'
+
+.header-text
+  font-size: 15vmax
+
+.cap-j
+  color: $color-white
+  font-family: 'tangerine'
+
+.sub-j
+  color: $color-white
+  font-family: 'Kreon', serif
+  font-size: 8vmax
+
+//  'supported living' text
+.sub-header-text
+  color: $color-white
+  font-family: 'Kreon', serif
+  font-size: 3vmax
+  margin: -7% 0 0 26%
+
+
+//  iphone 5, sg4
+@media (max-width: 360px)
+  .sub-header-text
+    margin: -22% 80% 10px
+
+// iphone 6
+@media  (min-width: 375px) and (max-width: 600px)
+  .sub-header-text
+    margin: -22% 66% 10px
+
+// LOGO PLACMENT on ipad in portrait
+@media (max-width: 769px) and (min-width: 450px)
+  header
+    height: 377px
+    padding-top: 145px
+
+// LOGO PLACMENT on most mobile phones in portrait
+@media (max-width: 450px)
+  header
+    height: 212px
+    padding-top: 54px
+
+// pushes Journeys logo down on large screens
+@media (min-width: 800px) and (max-width: 1600px)
+  #section0 > div.container > div
+    padding-top: 220px
+
+// ALSO pushes Journeys logo down on large screens
+@media (min-width: 1601px) and (max-width: 1920px)
+  #section0 > div.container > div
+    padding-top: 145px

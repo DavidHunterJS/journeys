@@ -9,13 +9,16 @@
   "author": "David Hunter",
   "license": "ISC",
   "devDependencies": {
-    "coffee-script": "^1.10.0",
+    "coffee-script": "*",
     "gulp": "^3.9.1",
-    "gulp-coffee": "^2.3.2",
-    "gulp-connect": "^4.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7"
+    "gulp-autoprefixer": "*",
+    "gulp-coffee": "*",
+    "gulp-connect": "*",
+    "gulp-minify-css": "*",
+    "gulp-plumber": "*",
+    "gulp-sass": "*",
+    "gulp-sourcemaps": "*",
+    "gulp-uglify": "*",
+    "gulp-util": "*"
   }
 }

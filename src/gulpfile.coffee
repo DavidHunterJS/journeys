@@ -1,13 +1,16 @@
 do ->
   'use strict'
   
-  gulp    = require 'gulp'
-  sass    = require 'gulp-sass'
-  gutil   = require 'gulp-util'
-  coffee  = require 'gulp-coffee'
-  uglify  = require 'gulp-uglify'
-  connect = require 'gulp-connect'
-  plumber = require 'gulp-plumber'
+  gulp         = require 'gulp'
+  sass         = require 'gulp-sass'
+  gutil        = require 'gulp-util'
+  coffee       = require 'gulp-coffee'
+  uglify       = require 'gulp-uglify'
+  connect      = require 'gulp-connect'
+  plumber      = require 'gulp-plumber'
+  minifyCSS    = require 'gulp-minify-css'
+  sourcemaps   = require 'gulp-sourcemaps'
+  autoprefixer = require 'gulp-autoprefixer'
 
 
   gulp.task 'connect', ->
@@ -20,7 +23,15 @@ do ->
   
   gulp.task 'sas', ->
     gulp.src('styles/*.sass')
-      .pipe(sass.sync()).on('error', sass.logError)
+      .pipe(sourcemaps.init())
+      .pipe(sass(
+        indentedSyntax: true
+        errLogToConsole: true
+        )).on('error', sass.logError)
+      .pipe(autoprefixer({
+        browsers: ['last 2 versions']
+      }))
+      .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('../dist/css'))
       .pipe connect.reload()
   
@@ -39,7 +50,7 @@ do ->
 
   gulp.task 'watch', ->
     gulp.watch [ '*.html' ], [ 'html' ]
-    gulp.watch [ './styles/*' ], [ 'sas' ]
+    gulp.watch [ './styles/*', './styles/*/*.sass' ], [ 'sas' ]
     gulp.watch [ 'js/*.js' ], [ 'js' ]
     # gulp.watch [ './coffee/*.coffee' ], [ 'coffeeTask' ]
     return

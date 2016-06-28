@@ -1,0 +1,68 @@
+// NAVIGATION TOOLBAR
+#nav 
+  position: static
+  top: -32px
+  width: 100%
+
+  &.affix
+    position: fixed
+    top: 0
+    transition: all .6s ease-in-out
+    z-index: 10
+
+.navbar-nav
+  margin: 1px 1px
+
+// NAV MAIN
+.navbar-custom
+  background-color: $color-white
+  border-width: 0
+  font-family: 'Lato', 'sans serif'
+  font-size: 1.1em
+  font-weight: 700
+  letter-spacing: 3px
+  text-transform: uppercase
+  transition: background-color .75s ease
+
+  .navbar-nav > li > a
+    border: 2px solid transparent
+    color: $color-gray
+    transition: color .75s ease, border .75s ease
+
+    &:hover
+      background-color: $color-white-darker
+      transition: color 1.5s ease, border 1.5s ease, background-color 1.5s ease
+
+// NAV SELECTED
+.navbar-inverse
+  .navbar-nav>.active>a
+    background-color: $color-white-darker
+    color: $color-white
+
+// THIS LOOKS DEAD - VERIFY AND DEL
+// .navbar-custom .navbar-nav>.dropdown>a .caret
+//   border-bottom-color: #999
+//   border-top-color: #999
+
+// .navbar-custom .dropdown-menu
+//   right: 0
+
+// 3.0.2 bug workaround
+.navbar-collapse.in
+  overflow-y: visible
+
+.navbar-toggle
+  outline: 0
+
+// mobile nav button
+#navButton
+  border-color: transparent
+  font-size: xx-large
+  margin-bottom: 1px
+  padding: 0 0 10px 42px
+
+  &:hover
+    background-color: $color-white
+
+.navbar-nav.nav-justified > li
+  float: none
