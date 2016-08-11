@@ -20,8 +20,12 @@ do ->
       livereload: true
     return
   
+  gulp.task 'html', ->
+    gulp.src('*.html')
+      .pipe(gulp.dest('../dist'))
+      .pipe connect.reload()
   
-  gulp.task 'sas', ->
+  gulp.task 'sask', ->
     gulp.src('styles/*.sass')
       .pipe(sourcemaps.init())
       .pipe(sass(
@@ -35,12 +39,7 @@ do ->
       .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest('../dist/css'))
       .pipe connect.reload()
-  
-  gulp.task 'html', ->
-    gulp.src('*.html')
-      .pipe(gulp.dest('../dist'))
-      .pipe connect.reload()
-  
+
   gulp.task 'coffee', ->
     gulp.src('./scripts/*.coffee')
       .pipe(plumber())
@@ -51,8 +50,8 @@ do ->
       .pipe connect.reload()
 
   gulp.task 'watch', ->
-    gulp.watch [ '*.html' ], [ 'html' ]
-    gulp.watch [ './styles/*', './styles/*/*.sass' ], [ 'sas' ]
+    gulp.watch [ './*.html'], ['html']
+    gulp.watch [ './styles/*', './styles/*/*.sass' ], [ 'sask' ]
     gulp.watch [ './scripts/*.coffee' ], [ 'coffee' ]
     return
   

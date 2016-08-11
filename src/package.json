@@ -15,6 +15,7 @@
     "gulp-clean-css": "^2.0.10",
     "gulp-coffee": "*",
     "gulp-connect": "*",
+    "gulp-jade": "^1.1.0",
     "gulp-plumber": "*",
     "gulp-sass": "*",
     "gulp-sourcemaps": "*",
