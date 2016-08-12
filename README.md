@@ -1,2 +1,2 @@
 # Journeys
-Website for journeys supported living services.
+Website for Journeys supported living services.
