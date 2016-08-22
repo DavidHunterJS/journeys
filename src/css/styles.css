@@ -8,6 +8,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
   font: normal 14px arial,sans-serif;
 }
+<<<<<<< HEAD
 h1,h2,h3,h4 {
   font-family: 'Kreon', serif;
   vertical-align:middle;
@@ -31,6 +32,9 @@ h2, h3 {
     font-size: 20px;
   }
 }
+=======
+
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 /* fix for too large of container margins on larger screens */
 @media (min-width: 1200px){
   .container {
@@ -38,6 +42,7 @@ h2, h3 {
     margin: 0 auto;
   }
 }
+<<<<<<< HEAD
 section {
   color: #ffffff;
   min-height: 400px;
@@ -45,10 +50,13 @@ section {
   height: 100%;
   padding-top:100px;
 }
+=======
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 .row {
   margin-left:0px;
   margin-right:0px;
 }
+<<<<<<< HEAD
 /* first divider under the nav menu */
  .divider1 {
   height: 65px;
@@ -69,6 +77,8 @@ section {
   /* Pad bottom by footer height */
   padding: 0 0 60px;
 }
+=======
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 
 /*
   SMALL ICONS/IMGS UNDER PROFILE IMAGES
@@ -93,6 +103,7 @@ section {
   width: 50px;
   height: 28px;
 }
+<<<<<<< HEAD
 .dollar {
   width: 50px;
   height: 50px;
@@ -114,6 +125,19 @@ header h1,header h2,header h3 a,header a,header a:hover {
 }
 
 
+=======
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
+
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 /*
   ======
   FOOTER
@@ -133,6 +157,7 @@ footer a {
   color:#efefef;
 }
 
+<<<<<<< HEAD
 
 
 
@@ -140,14 +165,81 @@ footer a {
 /*
   =============
   Journeys LOGO
+=======
+/* first divider under the nav menu */
+ .divider1 {
+  height: 65px;
+}
+.divider {
+  height:100px;
+}
+.panel {
+  border-width:0;
+}
+section {
+  color: #ffffff;
+  min-height: 400px;
+  height: auto !important;
+  height: 100%;
+  padding-top:100px;
+}
+
+/*
+  ======
+  HEADER
+  ======
+*/
+header {
+  height:550px;
+  color:#000000;
+}
+header h1,header h2,header h3 a,header a,header a:hover {
+  color:#101010;
+  font-weight:800;
+  text-decoration:none;
+}
+
+h1,h2,h3,h4 {
+  font-family: 'Kreon', serif;
+  vertical-align:middle;
+}
+h1 {
+  font-size:50px;
+  font-weight: 400;
+}
+h2, h3 {
+  font-family: 'Kreon', serif; /* remove on final color */
+  font-size: 27px;
+}
+
+/*
+  =============
+  Journeys logo
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
   =============
 */
 /*
   cursive J and 'ourneys'
 */
+<<<<<<< HEAD
 .header-text {font-size: 15vmax;}
 .cap-j {font-family: 'tangerine';color: #fff;}
 .sub-j {font-family: 'Kreon', serif;font-size: 8vmax;color: #fff;}
+=======
+.header-text {
+  font-size: 15vmax;
+}
+.cap-j {
+  font-family: 'tangerine';
+  color: #fff;
+}
+.sub-j {
+  font-family: 'Kreon', serif;
+  font-size: 8vmax;
+  color: #fff;
+}
+
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 /*
   'supported living' text 
 */
@@ -174,34 +266,64 @@ footer a {
   }
 }
 
+<<<<<<< HEAD
 /* LOGO PLACMENT on ipad in portrait */
+=======
+/* placement of the logo within the parent */
+/* ipad in portrait */
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 @media (max-width: 769px) and (min-width: 450px){
   header {
     height: 377px;
     padding-top: 145px;
   }
 }
+<<<<<<< HEAD
 /* LOGO PLACMENT on most mobile phones in portrait */
+=======
+/* most mobile phones in portrait */
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 @media (max-width: 450px) {
   header {
     height: 212px;
     padding-top: 54px;
   }
 }
+<<<<<<< HEAD
 
 /* pushes Journeys logo down on large screens ... */
+=======
+/* pushes Journeys logo down on large screens */
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 @media (min-width: 800px) and (max-width: 1600px){
   #section0 > div.container > div {
     padding-top: 220px;
   }
 }
+<<<<<<< HEAD
 /* ALSO pushes Journeys logo down on large screens */
+=======
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 @media (min-width: 1601px) and (max-width: 1920px){
   #section0 > div.container > div {
     padding-top: 145px;
   }
 }
+<<<<<<< HEAD
 
+=======
+@media (max-width: 375px) {
+  .h1, h1 {
+    font-size: 25px;
+  }
+  .h2, h2, h3 {
+    font-size: 22px;
+  }
+  .h4, h4 {
+    font-size: 20px;
+  }
+}
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 
   /*
   ======
@@ -218,7 +340,11 @@ footer a {
    position: fixed;
    top: 0;
    z-index:10;
+<<<<<<< HEAD
    transition: all .6s ease-in-out;
+=======
+   -webkit-transition: all .6s ease-in-out;
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 }
 @media (min-width: 767px) {
   .navbar-nav.nav-justified > li{
@@ -256,7 +382,10 @@ footer a {
   color: #fff;
   background-color: #c1c1bf;
 }
+<<<<<<< HEAD
 /* THIS LOOKS DEAD - VERIFY AND DEL */
+=======
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 .navbar-custom .navbar-nav>.dropdown>a .caret {
   border-top-color: #999;
   border-bottom-color: #999;
@@ -270,6 +399,11 @@ footer a {
 .navbar-toggle {
 	outline:0;
 }
+<<<<<<< HEAD
+=======
+/* end navigation bar */
+
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 /* mobile nav button */
 #navButton {
   border-color:transparent;
@@ -280,7 +414,10 @@ footer a {
 #navButton:hover{
   background-color: #fff;
 }
+<<<<<<< HEAD
 /* /END NAV BAR */
+=======
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
 
 /* google maps area */
 #map-canvas {
@@ -311,28 +448,44 @@ BACKGROUND IMAGES
 */
 
 .bg-0 {
+<<<<<<< HEAD
   background: url('../img/bg-0.png') no-repeat center center fixed;
+=======
+  background: url('../img/bg-0.png') no-repeat center center fixed; 
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
 .bg-1 {
+<<<<<<< HEAD
 	background: url('../img/008.jpg') no-repeat center center fixed;
+=======
+	background: url('../img/008.jpg') no-repeat center center fixed; 
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 .bg-2 {
+<<<<<<< HEAD
 	background: url('../img/013.jpg') no-repeat center center fixed;
+=======
+	background: url('../img/013.jpg') no-repeat center center fixed; 
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 .bg-3 {
+<<<<<<< HEAD
 	background: url('../img/013.jpg') no-repeat center center fixed;
+=======
+	background: url('../img/013.jpg') no-repeat center center fixed; 
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
     -webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;

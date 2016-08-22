@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #OS junk files
 [Tt]humbs.db
 *.DS_Store
@@ -7,3 +8,13 @@ bugs.txt
 **/unused
 **/old-images
 node_modules/
+=======
+#OS junk files
+[Tt]humbs.db
+*.DS_Store
+
+bugs.txt
+/color-palettes
+**/unused
+**/old-images
+>>>>>>> 14a6ca1c25817a8153420eb6d404ca8106ade183
